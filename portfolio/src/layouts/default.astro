@@ -1,0 +1,20 @@
+---
+import Head from '../components/layout/head.astro'
+import Navbar from '../components/layout/navbar.astro'
+import Footer from '../components/layout/footer.astro'
+---
+
+<html>
+
+    <head>
+        <Head/>
+    </head>
+
+    <body>
+        <Navbar/>
+
+        <!--Slot act as the placeholder for content wrapped in the default component -->
+        <slot/>
+        <Footer />
+    </body>
+</html>
