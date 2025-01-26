@@ -1,24 +1,57 @@
 ---
+const { navbar_title = "" } = Astro.props;
 ---
 
 <html>
-    <style>
-        .wrapper{
-            width: 100vw;
-            height: 8vh;
+  <style>
+    .wrapper {
+      display: flex;
+      width: 100vw;
+      height: 8vh;
 
-            
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 50vw;
+      display: flex;
+      height: inherit;
+      align-items: center;
+    }
+    .logo img {
+      height: inherit;
+    }
 
-            background-color: blue;
-        }
-    </style>
+    .navbar_text {
+      width: auto;
+      font-family: "Lexend", serif;
+      font-weight: 500;
+    }
 
-    <div class="wrapper">
-        <div class="logo">
+    .links {
+      align-items: center;
+      justify-content: right;
+      display: flex;
+      width: 50vw;
+      padding-right: 2em;
+    }
 
-        </div>
-        <div class="links">
+    .links a {
+      padding-left: 2em;
+    }
+  </style>
 
-        </div>
+  <div class="wrapper">
+    <div class="logo">
+      <img src="images/logo.svg" />
+      <h1 class="navbar_text">{navbar_title}</h1>
     </div>
+
+    <div class="links">
+      <a href="">Home</a>
+      <a href="">Portfolio</a>
+      <a href="">Test Link</a>
+    </div>
+  </div>
+
+
 </html>

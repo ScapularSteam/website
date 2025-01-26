@@ -1,7 +1,10 @@
 ---
-import Default from "../layouts/default.astro"
+import Default from "../layouts/default.astro";
+import Intro from "../components/content-sections/intro.astro";
 ---
 
-<Default>
-	<h1>Testing default layouts</h1>
+<Default navbar_title="Home">
+  <Intro />
+
+  <!-- Page starts here -->
 </Default>
