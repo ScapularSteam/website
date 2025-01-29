@@ -4,15 +4,26 @@
 
 <style>
   .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    height: 100vh;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
   .hero_image {
-    height: 100vh;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero_image img {
-    height: inherit;
+    height: auto;
+    width: 80%;
+    border-radius: 10%;
+    border: 30px solid white;
   }
 
   .intro {
@@ -23,11 +34,37 @@
 
   .text {
     display: block;
-    text-align: center;
+    text-align: left;
+    padding: 5em;
   }
 
-  * {
-    border: 1px solid black;
+  .text h1 {
+    font-family: "Lexend", sans-serif;
+    color: #1b1a1a;
+  }
+
+  .text p {
+    font-family: "aleo", serif;
+    color: #353333;
+  }
+  .button_wrapper a {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    margin-top: 2em;
+
+    border-radius: 10px;
+    border: 1px solid #3b3a3a;
+    background-color: white;
+
+    font-family: "Lexend", sans-serif;
+    text-decoration: none;
   }
 </style>
 
@@ -41,7 +78,17 @@
   <div class="intro">
     <div class="text">
       <h1>Hi, I'm David</h1>
-      <p>Student software engineer based in the UK</p>
+      <p>
+        A student software developer with a passion for learning more about
+        software engineering and Computer Science.
+      </p>
+      <p>
+        I have experience in Web Development, Python, and C# and I'm eager to
+        expand my skills whenever possible. Outside of coding, I love landscape
+        and aviation photography, archery, and graphics design. I also have some
+        experience
+      </p>
+      <div class="button_wrapper"><a href="/portfolio/">My Work</a></div>
     </div>
   </div>
 </div>

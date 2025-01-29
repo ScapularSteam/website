@@ -9,7 +9,7 @@ const { navbar_title = "" } = Astro.props;
       width: 100vw;
       height: 8vh;
 
-      border-bottom: 2px solid black;
+      background-color: white;
     }
     .logo {
       width: 50vw;
@@ -37,6 +37,12 @@ const { navbar_title = "" } = Astro.props;
 
     .links a {
       padding-left: 2em;
+      font-family: "Lexend", sans-serif;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
     }
   </style>
 
@@ -47,9 +53,9 @@ const { navbar_title = "" } = Astro.props;
     </div>
 
     <div class="links">
-      <a href="">Home</a>
-      <a href="">Portfolio</a>
-      <a href="">Test Link</a>
+      <a href="/">Home</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="https://github.com/ScapularSteam" target="_blank">Github</a>
     </div>
   </div>
 

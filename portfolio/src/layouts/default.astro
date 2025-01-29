@@ -4,11 +4,12 @@ import Navbar from "../components/layout/navbar.astro";
 import Footer from "../components/layout/footer.astro";
 
 const { navbar_title = "" } = Astro.props;
+const { tab_title = "" } = Astro.props;
 ---
 
 <html>
   <head>
-    <Head />
+    <Head tab_title={tab_title} />
   </head>
 
   <body>

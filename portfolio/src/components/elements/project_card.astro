@@ -1,0 +1,58 @@
+---
+
+---
+
+<style>
+  .container {
+    display: block;
+    height: inherit;
+    margin: 2em;
+    border: 3px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+
+    padding: 2em;
+  }
+  .container :global(.wrapper) {
+    height: fit-content;
+  }
+  .container :global(div img) {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    margin: auto;
+
+    border-radius: 18px;
+  }
+  .container :global(h2) {
+    font-family: "Lexend", sans-serif;
+    color: #1b1a1a;
+  }
+  .container :global(p) {
+    font-family: "aleo", serif;
+    color: #353333;
+  }
+  .container :global(a) {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    margin-top: 1em;
+
+    border-radius: 10px;
+    border: 1px solid #3b3a3a;
+    background-color: white;
+
+    font-family: "Lexend", sans-serif;
+    text-decoration: none;
+  }
+</style>
+
+<div class="container">
+  <slot />
+</div>
