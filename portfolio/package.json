@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@ascorbic/airtable-loader": "^1.0.5",
+    "airtable": "^0.12.2",
     "astro": "^5.1.8"
   }
 }

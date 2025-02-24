@@ -5,7 +5,7 @@
 <style>
   .container {
     display: block;
-    height: inherit;
+    min-height: inherit;
     margin: 2em;
     border: 3px solid black;
     border-radius: 20px;
@@ -14,7 +14,7 @@
     padding: 2em;
   }
   .container :global(.wrapper) {
-    height: fit-content;
+    height: inherit;
   }
   .container :global(div img) {
     width: 100%;
@@ -33,7 +33,7 @@
     color: #353333;
   }
   .container :global(a) {
-    display: block;
+    display: flex;
     width: fit-content;
     height: fit-content;
 
@@ -42,10 +42,12 @@
     padding-top: 1em;
     padding-bottom: 1em;
 
-    margin-top: 1em;
+    margin-top: 2em;
+
+    align-items: end;
 
     border-radius: 10px;
-    border: 1px solid #3b3a3a;
+    border: 2px solid #3b3a3a;
     background-color: white;
 
     font-family: "Lexend", sans-serif;
