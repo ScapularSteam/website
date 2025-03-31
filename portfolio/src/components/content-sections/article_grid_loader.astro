@@ -1,3 +1,24 @@
 ---
+// Fetch articles content collection generated at config.ts
+import { getCollection } from "astro:content";
+const articles = await getCollection("articles");
 
+const selectedArticle = 0;
 ---
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    height: fit-content;
+  }
+</style>
+
+<div class="container">
+  <div>
+    <h1>{articles[selectedArticle].data.title}</h1>
+    <p>{articles[selectedArticle].data.description}</p>
+    <img src={articles[selectedArticle].data.cover_image} />
+  </div>
+</div>
