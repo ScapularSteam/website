@@ -3,7 +3,8 @@
 import { getCollection } from "astro:content";
 const articles = await getCollection("articles");
 
-const selectedArticle = 0;
+// Import components
+import ArticleCard from "../elements/article_card.astro";
 ---
 
 <style>
@@ -16,9 +17,18 @@ const selectedArticle = 0;
 </style>
 
 <div class="container">
-  <div>
-    <h1>{articles[selectedArticle].data.title}</h1>
-    <p>{articles[selectedArticle].data.description}</p>
-    <img src={articles[selectedArticle].data.cover_image} />
-  </div>
+  <!--Iterate through articles array and map each entry to new article card-->
+  {
+    articles.map((article) => (
+      <ArticleCard>
+        <div class="wrapper">
+          <img src={article.data.cover_image} />
+        </div>
+        <div class="content">
+          <h2>{article.data.title}</h2>
+          <p>{article.data.description}</p>
+        </div>
+      </ArticleCard>
+    ))
+  }
 </div>
