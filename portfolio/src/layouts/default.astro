@@ -21,7 +21,9 @@ const { tab_title = "" } = Astro.props;
     <Navbar navbar_title={navbar_title} />
 
     <!--Slot act as the placeholder for content wrapped in the default component -->
-    <slot />
-    <Footer />
+    <main transition:animate="fade">
+      <slot />
+      <Footer />
+    </main>
   </body>
 </html>

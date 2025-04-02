@@ -10,7 +10,7 @@ import ArticleCard from "../elements/article_card.astro";
 <style>
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     height: fit-content;
   }
@@ -21,12 +21,19 @@ import ArticleCard from "../elements/article_card.astro";
   {
     articles.map((article) => (
       <ArticleCard>
-        <div class="wrapper">
-          <img src={article.data.cover_image} />
-        </div>
         <div class="content">
           <h2>{article.data.title}</h2>
           <p>{article.data.description}</p>
+          <p class="date">
+            {() => {
+              const output = "Date Published: " + article.data.date_published;
+              return output;
+            }}
+          </p>
+          <a href="">Read now</a>
+        </div>
+        <div class="wrapper">
+          <img src={article.data.cover_image} />
         </div>
       </ArticleCard>
     ))

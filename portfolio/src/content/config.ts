@@ -3,8 +3,10 @@ import { z, defineCollection } from "astro:content";
 import { airtableLoader } from "@ascorbic/airtable-loader";
 import base from "airtable";
 
+// Choosing a var instead of const allows content collection to be reset inbetween builds, ensuring articles are loaded properly
+var articles;
 // Create content collection
-const articles = defineCollection({
+articles = defineCollection({
 
   // Load records from Airtable base
   loader: airtableLoader({

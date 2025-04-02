@@ -4,14 +4,17 @@
 
 <style>
   .container {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
     min-height: inherit;
     margin: 2em;
-    border: 3px solid black;
+    border: 3px solid #a49898;
     border-radius: 20px;
     overflow: hidden;
 
     padding: 2em;
+
+    background-color: #e9eeee;
   }
   .container :global(.wrapper) {
     height: inherit;
@@ -27,10 +30,16 @@
   .container :global(h2) {
     font-family: "Lexend", sans-serif;
     color: #1b1a1a;
+    font-size: 2.5em;
   }
   .container :global(p) {
     font-family: "aleo", serif;
     color: #353333;
+    font-size: 1.2em;
+  }
+
+  .container :global(.content) {
+    width: 80%;
   }
   .container :global(a) {
     display: flex;
