@@ -2,6 +2,8 @@
 import Default from "../../layouts/default.astro";
 import ProjectsGrid from "../../components/content-sections/projects_grid.astro";
 import ProjectCard from "../../components/elements/project_card.astro";
+
+import aimifyCover from "../../../public/images/cover_images/aimify_cover.png";
 ---
 
 <Default navbar_title="Portfolio" tab_title="Fletchworks">
@@ -17,7 +19,7 @@ import ProjectCard from "../../components/elements/project_card.astro";
   <ProjectsGrid>
     <ProjectCard>
       <div class="wrapper">
-        <img src="../../../public/images/cover_images/aimify_cover.png" />
+        <img src={aimifyCover.src} />
       </div>
       <h2>Aimify</h2>
       <h3>In progress</h3>
@@ -36,7 +38,7 @@ import ProjectCard from "../../components/elements/project_card.astro";
       <h3>Hardware complete, firmware in progress</h3>
       <p>
         A custom Raspberry Pi sensor HAT (Hardware attached on Top), with 2 sets
-        of ultrasonic distance sensors and 5050 LEDs
+        of ultrasonic distance sensors and 5050 LEDs.
       </p>
       <a href="">Link coming soon</a>
     </ProjectCard>
