@@ -26,7 +26,8 @@ import ArticleCard from "../elements/article_card.astro";
           <p>{article.data.description}</p>
           <p class="date">
             {() => {
-              const output = "Date Published: " + article.data.date_published;
+              const output =
+                "Date Published: " + article.data.date_published.toDateString();
               return output;
             }}
           </p>
